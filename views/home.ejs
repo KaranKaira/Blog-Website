@@ -1,0 +1,13 @@
+<%- include('partials/header'); %>
+<h1>Journals</h1>
+
+<p><%=homeStartingContent%></p> 
+
+<%  all_posts.forEach((post)=>{ %>
+    <h2> <%= post.title %> </h2>
+    <p> <%= post.body.substring(0,100) + '...'%> 
+    <a href="/posts/${<%= post.preety_route %>} " >Read More</a>
+    </p>
+<% });  %>
+
+<%- include('partials/footer'); %>
