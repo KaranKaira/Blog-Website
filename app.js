@@ -47,7 +47,7 @@ app.post('/compose',(req,res)=>{
   const post = {
     title : req.body.post_title,
     body : req.body.post_body,
-    // to beautify the url 
+    // to beautify the url  
     preety_route : _.kebabCase(req.body.post_title)
   };
   all_posts.push(post);
