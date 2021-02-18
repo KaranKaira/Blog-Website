@@ -58,7 +58,7 @@ app.post('/compose',(req,res)=>{
 app.get('/posts/:post_id',(req,res)=>{
   // params is a object which comes with req object which holds all paramters as key-value pair
   let requested_post = _.lowerCase(req.params.post_id);
-
+ 
   all_posts.forEach((post)=>{
     if(_.lowerCase(post.title) === requested_post){
       res.render('post',{
